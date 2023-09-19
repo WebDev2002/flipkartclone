@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Mooli&family=Noto+Sans+Mahajani&family=Roboto:wght@300&family=Signika+Negative&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                font: {
+                    font1: 'Roboto, sans-serif',
+                    font2: 'Mooli, sans-serif',
+                    font3: 'Borel',
+                    extend: {
+                        colors: {
+                            clifford: '#da373d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container-fluid   bg-[#f1f3f6] pr-0 pl-0">
+        <div class="container-fluid bg-primary  ">
+            <div class="container">
+                <nav class="navbar py-[3px]  w-[85%] mx-auto">
+                    <div class="container-fluid  justify-content-evenly">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item ">
+                                <span class="text-white text-[20px]">Flipkart</span>
+                                <a class="nav-link text-white p-0 text-[10px]" href="#">Explore <span
+                                        class="text-yellow-500">Plus</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                        <form action="#" class="form ">
+                            <input type="text" placeholder="Search for products, brands and more "
+                                class="w-[400px] px-[15px] py-[6px] text-[14px] outline-0">
+                            <i
+                                class="fa-solid fa-magnifying-glass absolute right-[35.5rem] top-[17.5px] text-[18px] text-primary"></i>
+                            <button
+                                class="btn bg-white rounded-0 w-[120px] pt-[1px] pb-[1px] text-primary mb-[4px] ml-[15px] peer"
+                                data-bs-toggle="modal" data-bs-target="#login-page">Login</button>
+
+                            <div
+                                class="hidden peer-hover:flex hover:flex z-[1]  w-[230px] mt-[0.5rem] flex-col bg-white drop-shadow-lg absolute left-[31rem]">
+                                <p class="d-flex justify-content-around py-[1rem] px-[0.2rem] text-[13px] fw-bold">New
+                                    Customer? <span><a href="#" class="text-primary text-[13px] fw-bold">Sign
+                                            up</a></span>
+                                </p>
+                                <ul class="">
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] px-[1rem] text-[13px] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-circle-user text-primary"></i><a class="px-[1rem]"
+                                            href="#">My Profile</a>
+                                    </li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] px-[1rem] text-[13px] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-plus text-primary"></i><a class="px-[1rem]"
+                                            href="#">Flipkart
+                                            Plus
+                                            Zone</a></li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] px-[1rem] text-[13px] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-clipboard text-primary"></i><a class="px-[1rem]"
+                                            href="#">Order</a></li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] px-[1rem] text-[13px] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-heart text-primary"></i><a class="px-[1rem]"
+                                            href="#">Wishlist</a>
+                                    </li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] px-[1rem] text-[13px] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-award text-primary"></i><a class="px-[1rem]"
+                                            href="#">Rewards</a>
+                                    </li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] px-[1rem] text-[13px] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-gift text-primary"></i><a class="px-[1rem]" href="#">Gift
+                                            Cards</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                        <div class="modal " id="login-page">
+                            <div class="modal-dialog max-w-[700px]  mx-auto my-[3rem] ">
+                                <div class="modal-content">
+                                    <div class="modal-body d-flex p-[0px] h-[520px] ">
+                                        <div
+                                            class=" text-white bg-primary w-[350px] rounded-1 d-flex flex-column justify-content-between py-[3rem]">
+                                            <div class=" w-[230px] mx-auto ">
+                                                <p class="text-[2rem] fw-bold pb-[1rem]">Login</p>
+                                                <span class="text-[20px] text-[#dbdbdb]">Get access to your Orders,
+                                                    Wishlist
+                                                    and
+                                                    Recommendations</span>
+                                            </div>
+                                            <img src="img/login image.png" class="w-[250px] h-[130px] mx-auto">
+                                        </div>
+                                        <div
+                                            class="bg-white  d-flex flex-column justify-content-between rounded-1 px-[2rem] py-[4rem]">
+                                            <form action="#" class="form">
+                                                <label for="number" class="text-[13px] fw-bold  text-[#878787]">Enter
+                                                    Email/Mobile
+                                                    Number</label>
+                                                <input type="text" name="number" id=""
+                                                    class="form-control rounded-0 border-t-0 border-l-0 border-r-0  border-primary shadow-none">
+                                                <p class="text-[12px] pt-[2rem] pb-[1rem] text-[#878787]">By continuing,
+                                                    you
+                                                    agree to Flipkart's <a class="text-primary"
+                                                        href="https://www.flipkart.com/pages/terms"
+                                                        target="_blank">Terms of
+                                                        Use</a> and <a class="text-primary"
+                                                        href="https://www.flipkart.com/pages/privacypolicy"
+                                                        target="_blank">Privacy
+                                                        Policy.</a>
+                                                </p>
+                                                <button
+                                                    class=" bg-[#fb641b] text-white w-[350px] py-[0.699rem] rounded-[3px] ">Request
+                                                    OTP</button>
+                                            </form>
+                                            <a href="#"
+                                                class="text-primary text-[13px] w-[210px] mx-auto relative top-[2rem]">New
+                                                to Flipkart? Create an account</a>
+                                            <div
+                                                class="modal-footer absolute right-[-3.5rem] top-[-1.5rem] text-white border-top-0">
+                                                <button type="button" class="" data-bs-dismiss="modal">
+                                                    <i class="fa-solid fa-xmark text-[3rem]"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav flex-row ">
+                            <li class="nav-item px-[20px] text-[18px] ">
+                                <a class="nav-link text-white" href="#">Become a seller</a>
+                            </li>
+                            <li class="nav-item d-flex px-[25px] text-[18px] peer">
+                                <a class="nav-link text-white peer" href="#">More</a>
+                                <i class="fa-solid fa-angle-down text-[8px] text-white absolute top-[23px] pl-[48px] peer-hover:rotate-180 
+                                peer-hover:ml-[48px]"></i>
+                            </li>
+                            <div
+                                class=" hidden peer-hover:flex hover:flex z-[1] w-[250px] mt-[3rem] flex-col bg-white drop-shadow-lg absolute left-[48rem]">
+                                <ul class="">
+                                    <li class="py-[1rem] text-[13px] px-[1rem] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-bell text-primary"></i><a class="px-[1rem]"
+                                            href="#">Notification
+                                            Preferences</a></li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] text-[13px] px-[1rem] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-clock text-primary"></i><a class="px-[1rem]"
+                                            href="#">24x7
+                                            Customer
+                                            Care</a></li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] text-[13px] px-[1rem] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-arrow-trend-up text-primary"></i><a class="px-[1rem]"
+                                            href="#">Advertise</a>
+                                    </li>
+                                    <hr class="text-[#94a3b8]">
+                                    <li class="py-[1rem] text-[13px] px-[1rem] hover:bg-[#f8fafc]"><i
+                                            class="fa-solid fa-download text-primary"></i><a class="px-[1rem]"
+                                            href="#">Download
+                                            App</a></li>
+                                </ul>
+                            </div>
+                            <li class="nav-item d-flex px-[25px] text-[18px]">
+                                <i class="fa-solid fa-cart-shopping text-white h-[20px]  pt-[14px] pr-[8px]"></i>
+                                <a class="nav-link text-white" href="#">Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container-fluid bg-white shadow-md">
+            <div class="container text-[#111827] ">
+                <div class="d-flex align-content-center justify-content-around py-[1rem]">
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#" class="hover:text-sky-500"><img
+                                src="img/image1.webp" class="w-[65px]" alt="">
+                            <p class="text-[13px] font-normal text-center fw-medium">Gorcery</p>
+                        </a></div>
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#" class="hover:text-sky-500"><img
+                                src="img/image2.webp" class="w-[65px]" alt="">
+                            <p class="text-[13px]  fw-medium text-center">Mobiles</p>
+                        </a></div>
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#"
+                            class="peer hover:text-sky-500"><img src="img/image3.webp" class="w-[65px] peer" alt="">
+                            <p class="text-[13px] fw-medium text-center peer">Fashion</p>
+                        </a>
+                        <i class="fa-solid fa-angle-down h-[20px] mt-[4.4rem] relative  left-[-5px] text-[10px] peer-hover:rotate-180  
+                        peer-hover:text-sky-500 peer-hover:h-[10px]"></i>
+                        <div
+                            class=" hidden  peer-hover:flex hover:flex w-[35%] bg-white z-[1] mt-[0.5rem] top-[10rem] shadow-md absolute">
+                            <div class="w-[50%] shadow-xl ">
+                                <ul class="py-[1rem]">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] text-sky-500 bg-[#f8fafc] font-bold ">
+                                        <a href="#">Men's Top Wear</a><i
+                                            class="fa-solid fa-angle-right float-right mt-[5px] text-[10px]"></i>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Bottom Wear</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Women Ethic</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Women Western</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men Footwear</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Women Footwear</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Watches and Accessories</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bags, Suitcases & Luggage</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Kids</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Essertials</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Winter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-[50%]">
+                                <p class="pt-[1rem] text-[12px] fw-bold px-[1.5rem] text-[#6b7280]">MORE IN MEN'S TOP
+                                    WEAR
+                                </p>
+                                <ul class="pb-[1rem] ">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">All</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's T-Shirts</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Casual Shirt</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Formal Shirt </a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Kurtas</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Ethnic Sets</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Blazers</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Raincoat</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Windcheaster</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Suit</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#"
+                            class="peer hover:text-sky-500"><img src="img/image4.webp" class="w-[65px] peer" alt="">
+                            <p class="text-[13px]  fw-medium text-center peer">Electronics</p>
+
+                        </a><i class="fa-solid fa-angle-down h-[20px] mt-[4.4rem] relative left-[4px] text-[10px] peer-hover:rotate-180  
+                        peer-hover:text-sky-500 peer-hover:h-[10px]"></i>
+                        <div
+                            class=" hidden  peer-hover:flex hover:flex w-[35%] bg-white z-[1] mt-[0.5rem] top-[10rem] shadow-md absolute">
+                            <div class="w-[50%] shadow-xl">
+                                <ul class="py-[1rem]">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] text-sky-500 bg-[#f8fafc] font-bold ">
+                                        <a href="#">Audio</a><i
+                                            class="fa-solid fa-angle-right float-right mt-[5px] text-[10px]"></i>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Electronic GST Store</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Cameras & Accessories</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Computer Peripherals</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Gaming</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Health & Personal Care</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Laptop Accessories</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Laptop and Desktop</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Modile Accesory</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Powerbank</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-[50%]">
+                                <p class="pt-[1rem] text-[12px] fw-bold px-[1.5rem] text-[#6b7280]">MORE IN AUDIO</p>
+                                <ul class="pb-[1rem] ">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">All</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bluetooth Headphone</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Wried Headphones</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">True Wrieless Earbuds</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bluetooth Speakers</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Soundbars</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Home Theatres</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">TV Streaming Device</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Remote Control</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">DTH Set Top Box</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[150px] d-flex justify-content-center"><a href="#"
+                            class="peer hover:text-sky-500"><img src="img/image5.webp" class="w-[65px] mx-auto peer" alt="">
+                            <p class="text-[13px] fw-medium text-center peer">Home & Furniture</p>
+
+                        </a><i class="fa-solid fa-angle-down h-[20px] mt-[4.4rem] relative  left-[6px] text-[10px] peer-hover:rotate-180  
+                        peer-hover:text-sky-500 peer-hover:h-[10px]"></i>
+                        <div
+                            class=" hidden  peer-hover:flex hover:flex w-[35%] bg-white z-[1] mt-[0.5rem] top-[10rem] shadow-md absolute">
+                            <div class="w-[50%] shadow-xl">
+                                <ul class="py-[1rem]">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] text-sky-500 bg-[#f8fafc] font-bold ">
+                                        <a href="#">Home Furnishings</a><i
+                                            class="fa-solid fa-angle-right float-right mt-[5px] text-[10px]"></i>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Furniture Studio</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Living Room Furniture</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Kitchen & Dining</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bedroom Furniture</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Home Decor</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Tools & Utility</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Work Space Furniture</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Lightings & Electricals</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Space Saving Furniture</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-[50%]">
+                                <p class="pt-[1rem] text-[12px] fw-bold px-[1.5rem] text-[#6b7280]">MORE IN HOME
+                                    FURNISHINGS
+                                </p>
+                                <ul class="pb-[1rem] ">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">All</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bed Linens</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bedsheets</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Blankets</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Curtains & Accessories</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bath linen</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Floor coverings</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Covers & protectors</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Cushions & Pillows</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Kitchens Linen Sets</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#" class="hover:text-sky-500"><img
+                                src="img/image6.webp" class="w-[65px]" alt="">
+                            <p class="text-[13px] fw-medium text-center">Appliances</p>
+                        </a></div>
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#" class="hover:text-sky-500"><img
+                                src="img/image7.webp" class="w-[65px]" alt="">
+                            <p class="text-[13px] fw-medium text-center">Travel</p>
+                        </a></div>
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#" class="hover:text-sky-500"><img
+                                src="img/image8.webp" class="w-[65px]" alt="">
+                            <p class="text-[13px] fw-medium text-center">Top Offers</p>
+                        </a></div>
+                    <div class="w-[150px] d-flex justify-content-center"><a href="#"
+                            class="peer hover:text-sky-500"><img src="img/image9.webp" class="w-[65px] mx-auto peer" alt="">
+                            <p class="text-[13px] fw-medium text-center peer">Beauty, Toys & More</p>
+
+                        </a><i class="fa-solid fa-angle-down h-[20px] mt-[4.4rem] relative   left-[5px] text-[10px] peer-hover:rotate-180  
+                        peer-hover:text-sky-500 peer-hover:h-[10px]"></i>
+                        <div
+                            class=" hidden  peer-hover:flex hover:flex w-[35%] bg-white z-[1] mt-[0.5rem] top-[10rem] shadow-md absolute">
+                            <div class="w-[50%] shadow-xl">
+                                <ul class="py-[1rem]">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] text-sky-500 bg-[#f8fafc] font-bold ">
+                                        <a href="#">Beauty & Personal Care</a><i
+                                            class="fa-solid fa-angle-right float-right mt-[5px] text-[10px]"></i>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Men's Grooming</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Food & Drinks</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Nutrition & Health Care</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Baby Care</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Toys & School Supplies</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Sports & Fitness</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Books</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Music</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Stationery & Office Supplies</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-[50%]">
+                                <p class="pt-[1rem] text-[12px] fw-bold px-[1.5rem] text-[#6b7280]">MORE IN BEAUTY &
+                                    PERSONAL CARE</p>
+                                <ul class="pb-[1rem] ">
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">View All</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Bath & Oral Care</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Personal Hygiene</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Eye Makeup</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Face Makeup</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Lip Makeup</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Hair Care</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">BAth Essentials</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Women's Personal Hygiene</a>
+                                    </li>
+                                    <li
+                                        class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                        <a href="#">Body & Skin Care</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[100px] d-flex justify-content-center"><a href="#"
+                            class="peer hover:text-sky-500"><img src="img/image10.webp" class="w-[65px] peer" alt="">
+                            <p class="text-[13px] fw-medium text-center peer">Two Wheelers</p>
+
+                        </a><i class="fa-solid fa-angle-down h-[20px] mt-[4.4rem] relative  left-[5px]  text-[10px] peer-hover:rotate-180  
+                        peer-hover:text-sky-500 peer-hover:h-[10px]"></i>
+                        <div
+                            class=" hidden  peer-hover:flex hover:flex w-[15%] bg-white z-[1] mt-[0.5rem] top-[10rem] shadow-md absolute">
+                            <ul class="py-[1rem]">
+                                <li
+                                    class="py-[0.7rem] px-[0.5rem] mx-[1rem] w-[170px] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                    <a href="#">Petrol Vehicles</a>
+                                </li>
+                                <li
+                                    class="py-[0.7rem] px-[0.5rem] mx-[1rem] text-[13px] hover:text-sky-500 hover:bg-[#f8fafc] hover:font-bold">
+                                    <a href="#">Electric Vehicles</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid my-[0.6rem]">
+            <div id="img_slider" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#"><img src="slider_image/banner1.jpg" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+                    <div class="carousel-item ">
+                        <a href="#"><img src="slider_image/banner2.webp" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+                    <div class="carousel-item ">
+                        <a href="#"><img src="slider_image/banner3.webp" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+                    <div class="carousel-item ">
+                        <a href="#"><img src="slider_image/banner4.webp" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+                    <div class="carousel-item ">
+                        <a href="#"><img src="slider_image/banner5.webp" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+                    <div class="carousel-item ">
+                        <a href="#"><img src="slider_image/banner6.webp" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+                    <div class="carousel-item ">
+                        <a href="#"><img src="slider_image/banner7.webp" class="w-[100%] h-[300px]" alt=""></a>
+                    </div>
+
+                </div>
+
+                <button class="bg-white text-black w-[50px] h-[100px] rounded-r-lg absolute top-[6rem]" type="button"
+                    data-bs-target="#img_slider" data-bs-slide="prev">
+                    <span class="carousel-control-icon text-dark"><i
+                            class="fa-solid fa-angle-left text-[2rem]"></i></span>
+                </button>
+                <button class="bg-white text-black w-[50px] h-[100px] rounded-l-lg absolute right-0 top-[6rem]"
+                    type="button" data-bs-target="#img_slider" data-bs-slide="next">
+                    <span class="carousel-control-icon "><i class="fa-solid fa-angle-right text-[2rem]"></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="container-fluid mt-[0.8rem]">
+            <div class=" d-flex justify-content-between h-[350px] mb-[0.7rem]">
+                <div class="w-[81.3%] h-[340px] bg-white d-flex rounded-[2px] shadow-md">
+                    <div class=" h-[350px] w-[21%] d-flex flex-col justify-content-evenly align-items-center">
+                        <p class="text-[35px] w-[150px] mt-[2.2rem] mb-[0.3rem] text-center ">Best of Electronics</p>
+                        <button type="btn"
+                            class="btn btn-primary rounded-[2px] mt-[0.5rem]  px-[1.2rem] py-[0.5rem] w-[100px] font-medium  text-[13px]">VEIW
+                            ALL</button>
+                        <img src="img/leftbanner.webp" class="w-[230px] h-[120px] rounded-bl-[2px]" alt="">
+                    </div>
+                    <div class="w-[79%] overflow-x-hidden">
+                        <div class=" w-[1700px] h-[340px] d-flex mr-[5rem]  align-items-center text-[14px]">
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700 peer">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item1.webp" class="w-[100%] " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Monitor</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;1500</p>
+                                    <p class="text-[#848484]">HP</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item2.webp" class="w-[100%]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Top Mirrorless Cameras</p>
+                                    <p class="text-success py-[0.3rem]">Shop Now!</p>
+                                    <p class="text-[#848484]">Canon, Sony, Fujiflim</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item3.webp" class="w-[170px]  " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Best Trimmers</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;399</p>
+                                    <p class="text-[#848484]">realme, Philips & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item4.webp" class="w-[170px]  " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Monitor</p>
+                                    <p class="text-success py-[0.3rem]">Shop Now!</p>
+                                    <p class="text-[#848484]">SAMSUNG</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item5.webp" class="w-[170px]  " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Printer</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;3999</p>
+                                    <p class="text-[#848484]">HP</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item6.webp" class="w-[170px]  " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Projecter</p>
+                                    <p class="text-success py-[0.3rem]">Shop Now!</p>
+                                    <p class="text-[#848484]">realme</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item7.webp" class="w-[170px]  " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Projecter</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;999</p>
+                                    <p class="text-[#848484]">realme & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item1 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/item8.webp" class="w-[170px]  " alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Monitor</p>
+                                    <p class="text-success py-[0.3rem]">Shop Now!</p>
+                                    <p class="text-[#848484]">Dell</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="bg-white text-black w-[50px] h-[100px] rounded-r-lg absolute top-[37rem] shadow-sm btn-pre1"
+                            onclick="pre1()" type="button">
+                            <span class="text-dark"><i class="fa-solid fa-angle-left text-[2rem]"></i></span>
+                        </button>
+                        <button
+                            class="bg-white text-black w-[50px] h-[100px] rounded-l-lg absolute right-[16.2rem] top-[37rem] shadow-sm btn-next1"
+                            onclick="next1()" type="button">
+                            <span class="text-dark"><i class="fa-solid fa-angle-right text-[2rem]"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-[18%] bg-white h-[340px] rounded-1 shadow-md">
+                    <img src="img/rightbanner.webp" class="h-[340px] w-[100%] p-[0.3rem]" alt="">
+                </div>
+            </div>
+            <div class=" d-flex justify-content-between h-[350px] mb-[0.2rem]">
+                <div class="w-[100%] h-[340px] bg-white d-flex rounded-[2px] shadow-md ">
+                    <div class=" h-[350px] d-flex flex-col justify-content-evenly align-items-center">
+                        <p class="text-[35px] w-[250px] mt-[2.2rem] mb-[0.3rem] text-center ">Beauty, Food, Toys & more
+                        </p>
+                        <button type="btn"
+                            class="btn btn-primary rounded-[2px] mt-[0.5rem]  px-[1.2rem] py-[0.5rem] w-[100px] font-medium  text-[13px]">VEIW
+                            ALL</button>
+                        <img src="img/leftbanner.webp" class="w-[230px] h-[120px] rounded-bl-[2px]" alt="">
+                    </div>
+                    <div class="w-[79%] overflow-x-hidden">
+                        <div class=" w-[1700px] h-[340px] d-flex mr-[5rem]  align-items-center text-[14px]">
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner1.webp" class="" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Gym Essentials</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;139</p>
+                                    <p class="text-[#848484]">Shop Now</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner2.webp" class="scale-125" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Geared Cycle</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;3999</p>
+                                    <p class="text-[#848484]">Leader, Cradiac & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner3.webp" class="scale-125" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Electric Cycle</p>
+                                    <p class="text-success py-[0.3rem]">Up to 40% Off</p>
+                                    <p class="text-[#848484]">Nuze, Motovolt & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner4.webp" class="scale-100" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">String lnstruments</p>
+                                    <p class="text-success py-[0.3rem]">Up to 70% Off</p>
+                                    <p class="text-[#848484]">Guitars, Ukuleles & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner5.webp" class="w-[170px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Soft Toys</p>
+                                    <p class="text-success py-[0.3rem]">Up to 70% Off</p>
+                                    <p class="text-[#848484]">Stuffed Toys , Plush Toys</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner6.webp" class="w-[170px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Rider Helmets</p>
+                                    <p class="text-success py-[0.3rem]">From &#8377;139</p>
+                                    <p class="text-[#848484]">Vega Steelord, HRX & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/2banner7.webp" class="scale-125" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Non-Geared Cycles</p>
+                                    <p class="text-success py-[0.3rem]">Up to 40% Off</p>
+                                    <p class="text-[#848484]">Hercules, Hero & more</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item2 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/2banner8.webp" class="w-[100px] ml-[3rem]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Microphones</p>
+                                    <p class="text-success py-[0.3rem]">Up to 70% Off</p>
+                                    <p class="text-[#848484]">Explore Now!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="bg-white text-black w-[50px] h-[100px] rounded-r-lg absolute top-[59.5rem] shadow-sm btn-pre2"
+                            onclick="pre2()" type="button">
+                            <span class="text-dark"><i class="fa-solid fa-angle-left text-[2rem]"></i></span>
+                        </button>
+                        <button
+                            class="bg-white text-black w-[50px] h-[100px] rounded-l-lg absolute right-[0.9rem] top-[59.5rem] shadow-sm btn-next2"
+                            onclick="next2()" type="button">
+                            <span class="text-dark"><i class="fa-solid fa-angle-right text-[2rem]"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class=" d-flex justify-content-between h-[350px]">
+                <div class="w-[100%] h-[340px] bg-white d-flex rounded-[2px] shadow-md ">
+                    <div class=" h-[350px] d-flex flex-col  align-items-center">
+                        <p class="text-[35px] w-[250px] mt-[4.5rem] mb-[0.9rem] text-center ">Gifts for Your Loved Ones
+                        </p>
+                        <button type="btn"
+                            class="btn btn-primary rounded-[2px] mt-[1rem]  px-[1.2rem] py-[0.5rem] w-[100px] font-medium  text-[13px]">VEIW
+                            ALL</button>
+                    </div>
+                    <div class="w-[79%] overflow-x-hidden">
+                        <div class=" w-[1700px] h-[340px] d-flex mr-[5rem]  align-items-center text-[14px]">
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/3banner1.webp" class="w-[110px] h-[170px] ml-[1.5rem]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Headset</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px]">
+                                    <img src="menu img/3banner2.webp" class="" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Tablets</p>
+                                    <p class="text-success py-[0.3rem]">Min. 40% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/3banner3.webp" class="w-[150px] h-[160px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Wall Clocks</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/3banner4.webp" class="w-[150px] h-[150px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Dream Catchers</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/3banner5.webp" class="w-[150px] h-[150px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Lipstick</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/3banner6.webp" class="w-[150px] h-[150px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Food Combo</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/3banner7.webp" class="w-[150px] h-[150px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Kids Cycles</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                            <div class=" w-[200px] h-[250px] mx-[1.5rem] item3 transition-all duration-700">
+                                <div class="w-[150px] h-[150px] ">
+                                    <img src="menu img/3banner8.webp" class="w-[150px] h-[150px]" alt="">
+                                </div>
+                                <div class="text-center mt-[2rem]">
+                                    <p class="font-medium">Table Lamps</p>
+                                    <p class="text-success py-[0.3rem]">Min. 50% Off</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="bg-white text-black w-[50px] h-[100px] rounded-r-lg absolute top-[81.6rem] shadow-sm btn-pre3"
+                            onclick="pre3()" type="button">
+                            <span class="text-dark"><i class="fa-solid fa-angle-left text-[2rem]"></i></span>
+                        </button>
+                        <button
+                            class="bg-white text-black w-[50px] h-[100px] rounded-l-lg absolute right-[0.9rem] top-[81.6rem] shadow-sm btn-next3"
+                            onclick="next3()" type="button">
+                            <span class="text-dark"><i class="fa-solid fa-angle-right text-[2rem]"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid  text-[#565656] mt-[3.5rem] bg-white shadow-sm py-[1.5rem] px-[1.5rem]">
+            <div class=" font-medium text-[15px] pb-[0.5rem] pt-[2rem]">
+                <span class="text-[#848484] text-[14px]">Top Stories:</span>
+                <a href="#" class="text-[ #56565] font-medium text-[14px]">Brand Directory</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">MOST SEARCHED FOR ON FLIPKART:</span>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px] ">Radha Dress for Girls</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Fashion Jewellery</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Spoyl Store</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">One Pieces</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Trend Stop</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Flipkart Axis Bank Super
+                    Elite Credit card</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">5G Mobile Phones</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Primebook Laptops</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Moto Edge 40</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Bounce Infinity E1</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Buy Laptop on EMI</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Infinix Zero Book
+                    Ultra</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">OPPO Reno8 5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">OPPO Reno8 Pro 5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Fresh Flower Bouquet</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Electric Cycles</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Badminton</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">iphone 14</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Bouquet</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Laptop Repair
+                    Services</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">AC Cleaning Services</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Oneplus Monitors</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Oneplus Monitors</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Mobile Repair
+                    Services</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Sell Old Mobile
+                    Phones</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Premium Laptops</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Electronics Store</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Phone cover</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Infinix INBook Y1
+                    Plus</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Okaya Electric
+                    Vehicles</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">bgauss electric
+                    scooter</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">OPPO Reno7 Pro 5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">iPhone 13</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Google Pixel 6a
+                    covers</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Flipkart Quick</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Ampere Magnus</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Flipkart Help Centre</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Online Boat Store</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Covers from Rs 99</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Flipkart Track Orders</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Flipkart Manage
+                    Orders</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Flipkart Return
+                    Orders</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Flipkart Gift Cards
+                    Store</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Flipkart Axis Bank Credit
+                    Card</a>
+                <a href="#" class="text-[12px]    px-[5px]">Flipkart Pay Later</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">MOBILES:</span>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">iPhone 12 64GB</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">iPhone 12 Pro 512GB</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">iPhone 12 128GB</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Vivo Y91i</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Vivo Y11</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Vivo Y15</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">SAMSUNG Galaxy S21
+                    FE5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Infinix HOT 30i</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Realme 10 Pro 5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">MOTOROLA G32</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">MOTOROLA G62 5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">REDMI Note 12 Pro 5G</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Infinix SMART 7</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Vivo Y50</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Vivo Y12</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Reno2 F</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Oppo A12</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Nothing Phone 5g</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Google Pixel 5g Phone</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Motorola 5g Phone</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Realme 5g Smartphone</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Apple 5g Phone</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Iqoo 5g Phones</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Oneplus 5g Phones</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Vivo 5g Phones</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Oppo 5g Smart Phones</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Oppo F15</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Oppo A31</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Samsung A71</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Samsung A51</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Samsung A31</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Realme X2</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">iPhone 11</a>
+                <a href="#" class="text-[12px] border-r border-black px-[5px]">iPhone 11 Pro</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Mobile Cover</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Mobile Offers</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">iphone x</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">4G Mobile</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Nokia Mobile</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Samsung Mobile</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">iphone</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Oppo Mobile</a>
+                <a href="#" class="text-[12px]   px-[5px]">Vivo Mobile</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">CAMERA:</span>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">GoPro Action Camera</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Nikon Camera</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Canon Camera</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Sony Camera</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Canon DSLR</a>
+                <a href="#" class="text-[12px]   px-[5px]">Nikon DSLR</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">LAPTOPS:</span>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Asus ROG Ally</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">MacBook Pro M2</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Premium Laptop</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">ASUS ROG Strix SCAR 16 (2023) Core i9
+                    13th Gen</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">ASUS ROG Zephyrus M16 (2023) Core i9
+                    13th Gen</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">ASUS Zenbook 14 OLED (2022)</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Realme Book Prime Core i5 11th Gen</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Microsoft Surface Go Pentium 128GB</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Branded Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Apple Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Acer Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Lenovo Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Dell Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Asus Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">HP Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Gaming Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">2 in 1 Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Laptops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Dell latest laptops 2022</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">HP latest laptops 2022</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Infinix INBook Y1 Plus</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">SAMSUNG Galaxy Book3</a>
+                <a href="#" class="text-[12px]   px-[5px]">12th Gen Intel Core Laptops</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">TVS:</span>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Nokia TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Panasonic TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Thomson TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Mi X Pro</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Realme TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Motorola TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">OnePlus TVs</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">LG TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Sony TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Samsung TV</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Android Television</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Iffalcon Tv</a>
+                <a href="#" class="text-[12px]   px-[5px]">Mi TV</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">LARGE APPLIANCES:</span>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">TV & Appliances End of Season Sale</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Television</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Washing Machines</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Refrigerators</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Air Conditioners</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Electric Cookers</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Electric Jug(Heater) / Travel
+                    Kettles</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Induction Cooktops</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Inverters / stabilizer</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Irons / Iron Box</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Mixer Grinder Juicer</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Wet Grinders</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Chimneys</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Microwave Ovens</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Vacuum Cleaners</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Water Purifier</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Fan</a>
+                <a href="#" class="text-[12px]   px-[5px]">MarQ Customer Care</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">CLOTHING:</span>
+                <a href="#" class="text-[12px] border-r border-black px-[5px]">Green bridal lehenga</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Bridal Blouse</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Half saree blouse
+                    designs</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Designer blouses</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Blouse designs</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Halter Neck Dress</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Men Shirts</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Half saree for kids</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Cotton saree blouse
+                    designs</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Kurta Pajama</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Men T-Shirts</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">New blouse design</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Jeans</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Bridal designer
+                    blouse</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Simple aari work blouse
+                    designs</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Bridal banarasi
+                    sarees</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Saree</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Satin Skirt</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Hooded jacket women</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Dresses</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Hoodie tshirts for
+                    men</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">One pieces</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Hip hop cap for men</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Groom wedding
+                    sherwani</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Designer Salwar Suits</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Bra</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Aari work blouse hand
+                    designs</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Cotton simple blouse
+                    designs</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Banarasi saree blouse
+                    designs</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Designer Kurtis</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Stylish blouse astin
+                    design</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Track Pant</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Blouse neck designs</a>
+                <a href="#" class="text-[12px] border-r border-black px-[5px]">Men Kurtas</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">V neck blouse designs</a>
+                <a href="#" class="text-[12px]   border-r border-black px-[5px]">Gym Wear</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Party Dresses</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Palazzo Suits</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Boys Clothing</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Gloves</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Nighty</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Maxi Dresses</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Anarkali</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Gowns</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Cut out dress</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Salwar Suits</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Kurtis</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Designer Sarees</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Leggings</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Shorts</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Georgette Sarees</a>
+                <a href="#" class="text-[12px]  border-r border-black px-[5px]">Ethnic Wear</a>
+                <a href="#" class="text-[12px]   px-[5px]">Briefs & Trunkss</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">FOOTWEAR:</span>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Adidas Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Reebok Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Nike Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Puma Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Boots</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Bata Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Woodland Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Skechers Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Sneakers</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Womens Boots</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Sport Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Loafers</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Sandals</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Lotto Sports Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Casual Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Womens Skechers Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Asics Sports Shoes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">FormalShoes</a>
+                <a class="text-[12px]   px-[5px]" href="">School Shoes</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">GROCERIES:</span>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">PhonePe Grocery Voucher</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Hand Wash</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Soap</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Cashew Nuts</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Sunflower Oil</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Eggs</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Toilet Cleaner</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Harpic Toilet Cleaner</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Dettol Soap</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Mustard Oil</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Biscuits</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Cheese</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Patanjali Atta</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Fortune Oil</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Aashirvaad Atta</a>
+                <a class="text-[12px]   px-[5px]" href="">Tea</a>
+            </div>
+            <div class="my-[0.5rem]">
+                <span class="text-[#848484] text-[14px]">BEST SELLING ON FLIPKART:</span>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Fire-Boltt Ninja Calling Pro Bluetooth
+                    Calling Smartwatch 1.69 inch HD Display Smartwatch</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Best Gas Geyser</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Kitchen Geyser</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Nutri Blenders</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Portable Air Cooler</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Best Air Cooler</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Bags</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Hitachi Refrigerator 3 Door</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Books</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Toys</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Candles</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Helmets</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Wall Clocks</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Baby Food</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Chocolates</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Cycles</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Calculators</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Lipsticks</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Vertiv UPS</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Fastrack Watches</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Wallets</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Earrings</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Gold Coins</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Realme Pad Mini</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Handbags</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">conekt SW2 Smartwatch</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Mivi DuoPods a350</a>
+                <a class="text-[12px]  px-[5px]" href="">Speaker Cleaner</a>
+            </div>
+            <div class="my-[0.5]">
+                <span class="text-[#848484] text-[14px]">FURNITURE:</span>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Furniture</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Sofas</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Beds</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Dining sets</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Wardrobes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Mattresses</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">TV Units</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Tables</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Chairs</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Shelves</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Bean Bags</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Office Chairs</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Computer Table</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Office Tables</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Red Sofa</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Wakefit Beds</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">White Sofa</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Wakefit Mattress</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Green Sofa</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Black Sofa</a>
+                <a class="text-[12px]  px-[5px]" href="">Brown Sofa</a>
+            </div>
+            <div class="my-[0.5rem] mb-[1rem]">
+                <span class="text-[#848484] text-[14px]">BGMH:</span>
+                <a class="text-[12px]  border-r border-black px-[5px] " href="">Whey Protein</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Homeopathy</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Cricket</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Cycles</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Footballs</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Treadmills</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Christmas Gifts</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Fitness Accessories</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Online Guitar</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Books Store</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Musical Instrument Store</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Dabur Chyawanprash</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Baidyanath Chyawanprash</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Energy Drinks</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Toys</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Milk Drink Mixes</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Rakhi</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Chyawanprash</a>
+                <a class="text-[12px]  border-r border-black px-[5px]" href="">Indian Flag</a>
+                <a class="text-[12px]  px-[5px]" href="">Protein Supplements</a>
+            </div>
+
+            <div class="w-[100%]">
+                <div class="text-[#878787] ">
+                    <div class="mt-[4.5rem] text-[11px]">
+                        <h1 class="text-[16px] mb-[10px] font-bold h1">Flipkart: The One-stop Shopping Destination</h1>
+                        E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one
+                        store to another in search of the latest phone when you can find it on the Internet in a single
+                        click? Not only mobiles. Flipkart houses everything you can possibly imagine, from trending
+                        electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion
+                        staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets,
+                        dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs,
+                        ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home
+                        furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we
+                        got them all covered. You name it, and you can stay assured about finding them all here. For
+                        those of you with erratic working hours, Flipkart is your best bet. Shop in your PJs, at night
+                        or in the wee hours of the morning. This e-commerce never shuts down.
+                        <br><br>
+                        What's more, with our year-round shopping festivals and events, our prices are irresistible.
+                        We're sure you'll find yourself picking up more than what you had in mind. If you are wondering
+                        why you should shop from Flipkart when there are multiple options available to you, well, the
+                        below will answer your question.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Flipkart Plus</h2>
+                        A world of limitless possibilities awaits you - Flipkart Plus was kickstarted as a loyalty
+                        reward programme for all its regular customers at zero subscription fee. All you need is 500
+                        supercoins to be a part of this service. For every 100 rupees spent on Flipkart order, Plus
+                        members earns 4 supercoins &amp; non-plus members earn 2 supercoins. Free delivery, early access
+                        during sales and shopping festivals, exchange offers and priority customer service are the top
+                        benefits to a Flipkart Plus member. In short, earn more when you shop more!
+                        <br><br>What's more, you can even use the Flipkart supercoins for a number of exciting services,
+                        like:
+                        <br>
+                        An annual Zomato Gold membership
+                        <br>
+                        An annual Hotstar Premium membership
+                        <br>
+                        6 months Gaana plus subscription
+                        <br>
+                        Rupees 550 instant discount on flights on ixigo
+                        <br>Check out https://www.flipkart.com/plus/all-offers for the entire list. Terms and conditions
+                        apply.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">No Cost EMI</h2>
+                        In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to
+                        shop with us under EMI, without shelling out any processing fee. Applicable on select mobiles,
+                        laptops, large and small appliances, furniture, electronics and watches, you can now shop
+                        without burning a hole in your pocket. If you've been eyeing a product for a long time, chances
+                        are it may be up for a no cost EMI. Take a look ASAP! Terms and conditions apply.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">EMI on Debit Cards</h2>
+                        Did you know debit card holders account for 79.38 crore in the country, while there are only
+                        3.14 crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make
+                        online shopping accessible to everyone, Flipkart introduces EMI on Debit Cards, empowering you
+                        to shop confidently with us without having to worry about pauses in monthly cash flow. At
+                        present, we have partnered with Axis Bank, HDFC Bank, State Bank of India and ICICI Bank for
+                        this facility. More power to all our shoppers! Terms and conditions apply.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Mobile Exchange Offers</h2>
+                        Get an instant discount on the phone that you have been eyeing on. Exchange your old mobile for
+                        a new one after the Flipkart experts calculate the value of your old phone, provided it is in a
+                        working condition without damage to the screen. If a phone is applicable for an exchange offer,
+                        you will see the 'Buy with Exchange' option on the product description of the phone. So, be
+                        smart, always opt for an exchange wherever possible. Terms and conditions apply.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">What Can You Buy From Flipkart?</h2>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Mobile Phones</h2>
+                        From budget phones to state-of-the-art smartphones, we have a mobile for everybody out there.
+                        Whether you're looking for larger, fuller screens, power-packed batteries, blazing-fast
+                        processors, beautification apps, high-tech selfie cameras or just large internal space, we take
+                        care of all the essentials. Shop from top brands in the country like Samsung, Apple, Oppo,
+                        Xiaomi, Realme, Vivo, and Honor to name a few. Rest assured, you're buying from only the most
+                        reliable names in the market. What's more, with Flipkart's Complete Mobile Protection Plan, you
+                        will never again find the need to run around service centres. This plan entails you to a number
+                        of post-purchase solutions, starting at as low as Rupees 99 only! Broken screens, liquid damage
+                        to phone, hardware and software glitches, and replacements -
+                        <b>
+                            the Flipkart Complete Mobile Protection
+                        </b>
+                        covers a comprehensive range of post-purchase problems, with door-to-door services.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Electronic Devices and Accessories</h2>
+                        When it comes to laptops, we are not far behind. Filter among dozens of super-fast operating
+                        systems, hard disk capacity, RAM, lifestyle, screen size and many other criterias for
+                        personalized results in a flash. All you students out there, confused about what laptop to get?
+                        Our
+                        <b>
+                            Back To College Store
+                        </b>
+                        segregates laptops purpose wise (gaming, browsing and research, project work, entertainment,
+                        design, multitasking) with recommendations from top brands and industry experts, facilitating a
+                        shopping experience that is quicker and simpler.
+                        <br><br>
+                        Photography lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras,
+                        ever reliable point-and-shoot cameras, millennial favourite instant cameras or action cameras
+                        for adventure junkies: our range of cameras is as much for beginners as it is for professionals.
+                        Canon, Nikon, GoPro, Sony, and Fujifilm are some big names you'll find in our store. Photography
+                        lovers, you couldn't land at a better page than ours. Cutting-edge DSLR cameras, ever reliable
+                        point-and-shoot cameras, millennial favourite instant cameras or action cameras for adventure
+                        junkies: our range of cameras is as much for beginners as it is for professionals. Canon, Nikon,
+                        GoPro, Sony, and Fujifilm are some big names you'll find in our store.
+                        <br><br>
+                        Turn your home into a theatre with a stunning surround sound system. Choose from our elaborate
+                        range of Sony home theatres, JBL soundbars and Philips tower speakers for an experience to
+                        remember.
+                        <br><br>
+                        How about jazzing up your phone with our quirky designer cases and covers? Our wide-ranging
+                        mobile accessories starting from headphones, power banks, memory cards, mobile chargers, to
+                        selfie sticks can prove to be ideal travel companions for you and your phone; never again worry
+                        about running out of charge or memory on your next vacation.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Large Appliances</h2>
+                        Sleek TVs, power-saving refrigerators, rapid-cooling ACs, resourceful washing machines -
+                        discover everything you need to run a house under one roof. Our
+                        <b>Dependable TV and Appliance Store
+                        </b> ensures zero transit damage, with a replacement guarantee if anything goes wrong; delivery
+                        and installation as per your convenience and a double warranty (Official Brand Warranty along
+                        with an extended Flipkart Warranty) - rest assured, value for money is what is promised and
+                        delivered. Shop from market leaders in the country like Samsung, LG, Whirlpool, Midea, Mi, Vu,
+                        Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.
+                        <br><br>
+                        For certain product categories, Customers meeting the eligibility criteria will have the option
+                        to buy larger quantities. To know more on the eligibility criteria and terms and conditions,
+                        please reach out to <a href="" class="text-primary">Purchases.oni@flipkart.com</a>.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Small Home Appliances</h2>
+                        Find handy and practical home appliances designed to make your life simpler: electric kettles,
+                        OTGs, microwave ovens, sandwich makers, hand blenders, coffee makers, and many more other
+                        time-saving appliances that are truly crafted for a quicker lifestyle. Live life king size with
+                        these appliances at home.
+                        <br><br>
+                        <h2 class="text-[14px]  mb-[10px] h2">Lifestyle</h2>Flipkart,
+                        <b>'India ka Fashion Capital'</b>,
+                        is your one-stop fashion destination for anything and everything you need to look good. Our
+                        exhaustive range of Western and Indian wear, summer and winter clothing, formal and casual
+                        footwear, bridal and artificial jewellery, long-lasting make-up, grooming tools and accessories
+                        are sure to sweep you off your feet. Shop from crowd favourites like Vero Moda, Forever 21,
+                        Only, Arrow, Woodland, Nike, Puma, Revlon, Mac, and Sephora among dozens of other
+                        top-of-the-ladder names. From summer staple maxi dresses, no-nonsense cigarette pants,
+                        traditional Bandhani kurtis to street-smart biker jackets, you can rely on us for a wardrobe
+                        that is up to date. Explore our in-house brands like Metronaut, Anmi, and Denizen, to name a
+                        few, for carefully curated designs that are the talk of the town. Get ready to be spoiled for
+                        choice.Festivals, office get-togethers, weddings, brunches, or nightwear - Flipkart will have
+                        your back each time.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Home and Furniture</h2>
+                        Moving to a new place is never easy, especially if you're buying new furniture. Beds, sofa sets,
+                        dining tables, wardrobes, and TV units - it's not easy to set up everything again. With the
+                        hundreds of options thrown at you, the ride could be overwhelming. What place is reliable, what
+                        furniture will stand the test of time? These are questions you must ask before you choose a
+                        store. Well, our
+                        <b>Durability Certified Furniture Store</b> has not only curated a range of furniture keeping in
+                        mind the modern Indian consumer but furniture that comes with a lab certification, ensuring they
+                        last you for up to 10 years. Yes, all our furniture has gone through 35 stability and load tests
+                        so that you receive only the best-quality furniture. <b>Be FurniSure</b>, always. Names to look
+                        out for are Nilkamal, Godrej Interio, Urban Ladder, HomeTown, Durian and Perfect Homes.
+                        <br><br>
+                        You may have your furniture all set up, but they could end up looking flat and incomplete
+                        without complementary decor. Curtains, cushion covers, bed sheets, wall shelves, paintings,
+                        floor lamps - find everything that turns a house to an inviting home under one roof at Flipkart.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Baby and Kids</h2>
+                        Your kids deserve only the best. From bodysuits, booties, diapers to strollers, if you're an
+                        expecting mother or a new mother, you will find everything you need to set sail on a smooth
+                        parenting journey with the help of our baby care collection. When it comes to safety, hygiene
+                        and comfort, you can rely on us without a second thought. Huggies, Pampers, MamyPoko, and
+                        Johnson &amp; Johnson: we host only the most-trusted names in the business for your baby.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Books, Sports and Games</h2>
+                        Work hard and no play? We don't believe in that. Get access to best-selling fiction and
+                        non-fiction books by your favourite authors, thrilling English and Indian blockbusters,
+                        most-wanted gaming consoles, and a tempting range of fitness and sports gadgets and equipment
+                        bound to inspire you to get moving.
+                        <br><br>
+                        <h2 class="text-[14px] font-bold mb-[10px] h2">Grocery/Supermart</h2>
+                        Launching into the grocery vertical, Flipkart introduces <b>Supermart</b> that is out to bring
+                        everyday essentials close to you. From pulses, spices, dairy, personal and sanitary care,
+                        breakfast essentials, health drinks, spreads, ready to cook, grooming to cleaning agents, we are
+                        happy to present everything you need to run a house. Now buy Grocery products for as low as 1
+                        Rupee only - our <b>1 Rupee Store</b> presents new products every day for a nominal price of 1
+                        Rupee only. Terms and conditions apply.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#172337]">
+            <div class="container text-[12px]">
+                <div class="d-flex justify-content-evenly py-[3rem]">
+                    <div class="d-flex flex-col font-normal text-white px-0">
+                        <h2 class=" font-medium text-[#848484] pb-[0.5rem]">ABOUT</h2>
+                        <a href="#" class="py-[0.3rem]">Contact Us</a>
+                        <a href="#" class="py-[0.3rem]">About Us</a>
+                        <a href="#" class="py-[0.3rem]">Careers</a>
+                        <a href="#" class="py-[0.3rem]">Flipkart Stories</a>
+                        <a href="#" class="py-[0.3rem]">Press</a>
+                        <a href="#" class="py-[0.3rem]">Flipkart Wholesale</a>
+                        <a href="#" class="py-[0.3rem]">Corporate Information</a>
+                    </div>
+                    <div class="d-flex flex-col font-normal text-white">
+                        <h2 class=" text-[#848484] pb-[0.5rem]">HELP</h2>
+
+                        <a href="#" class="py-[0.3rem] ">Payments</a>
+                        <a href="#" class="py-[0.3rem] ">Shipping</a>
+                        <a href="#" class="py-[0.3rem] ">Cancellation & Returns</a>
+                        <a href="#" class="py-[0.3rem] ">FAQ</a>
+                        <a href="#" class="py-[0.3rem] ">Report Infringement</a>
+
+                    </div>
+                    <div class="d-flex flex-col font-normal text-white">
+                        <h2 class=" text-[#848484] pb-[0.5rem]">CONSUMER POLICY</h2>
+
+                        <a href="#" class="py-[0.3rem]">Cancellation & Returns</a>
+                        <a href="#" class="py-[0.3rem]">Terms Of Use</a>
+                        <a href="#" class="py-[0.3rem]">Security</a>
+                        <a href="#" class="py-[0.3rem]">Privacy</a>
+                        <a href="#" class="py-[0.3rem]">Sitemap</a>
+                        <a href="#" class="py-[0.3rem]">Grievance Redressal</a>
+                        <a href="#" class="py-[0.3rem]">EPR Compliance</a>
+                    </div>
+                    <div class="d-flex flex-col font-normal text-white">
+                        <h2 class=" text-[#848484] pb-[0.5rem]">SOCIAL</h2>
+
+                        <a href="#" class="py-[0.3rem]">Facebook</a>
+                        <a href="#" class="py-[0.3rem]">Twitter</a>
+                        <a href="#" class="py-[0.3rem]">YouTube</a>
+
+                    </div>
+                    <div class="">
+                        <div class="border-l border-[#848484] px-[2rem] font-normal text-white">
+                            <h2 class=" text-[#848484] pb-[0.7rem]">Mail Us:</h2>
+                            <p>Flipkart Internet Private Limited,
+                                <br>
+                                Buildings Alyssa, Begonia &
+                                <br>
+                                Clove Embassy Tech Village,
+                                <br>
+                                Outer Ring Road, Devarabeesanahalli Village,
+                                <br>
+                                Bengaluru, 560103,
+                                <br>
+                                Karnataka, India
+                            </p>
+                        </div>
+                    </div>
+                    <div class="font-normal text-white">
+                        <h2 class="text-[#848484] pb-[0.7rem]">Registered Office Address:</h2>
+                        <p>
+                            Flipkart Internet Private Limited,
+                            <br>
+                            Buildings Alyssa, Begonia &
+                            <br>
+                            Clove Embassy Tech Village,
+                            <br>
+                            Outer Ring Road, Devarabeesanahalli Village,
+                            <br>
+                            Bengaluru, 560103,
+                            <br>
+                            Karnataka, India
+                            <br>
+                            CIN : U51109KA2012PTC066107
+                            <br>
+                            Telephone: <span class="text-[#1d4ed8]">044-45614700</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid border-t border-[#848484] py-[1rem]">
+                <div class="container text-white d-flex align-items-center justify-content-between ">
+                    <div class="text-[12px]">
+                        <a href="#" class="px-[1.7rem] text-[13px]"><i
+                                class="fa-solid fa-briefcase text-[#fbbf24] text-[18px] px-[0.5rem]"></i>Become a
+                            Seller</a>
+                        <a href="#" class="px-[1.7rem] text-[13px]"><i
+                                class="fa-solid fa-arrow-trend-up text-[#fbbf24] text-[18px] px-[0.5rem]"></i>Advertise</a>
+                        <a href="#" class="px-[1.7rem] text-[13px]"><i
+                                class="fa-solid fa-gift text-[#fbbf24] text-[18px] px-[0.5rem]"></i>Gift Cards</a>
+                        <a href="#" class="px-[1.7rem] text-[13px]"><i
+                                class="fa-sharp fa-solid fa-circle-question text-[#fbbf24] text-[18px] px-[0.5rem]"></i>Help
+                            Center</a>
+                        <span class="pl-[1.5rem]">2007-2024 Flipkart.in</span>
+                    </div>
+                    <div class="w-[300px]">
+                        <img src="img/payment-method.png" class="scale-125 pr-[2rem]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="app.js"></script>
+
+
+</html>
